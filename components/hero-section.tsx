@@ -8,7 +8,7 @@ export function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-5xl text-balance">
-                India's First Culturally Anchored Cryptographic Trust Layer
+                Tradition Secures Tomorrow
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground text-pretty">
                 {
@@ -20,7 +20,7 @@ export function HeroSection() {
                   Request Demo
                 </Button>
                 <Button variant="outline" size="lg" className="px-8 py-3 text-base bg-transparent">
-                  View Technology
+                  Learn More
                 </Button>
               </div>
             </div>
@@ -33,7 +33,7 @@ export function HeroSection() {
                   className="w-full h-full object-contain rounded-lg"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium">
+              <div className="absolute -bottom-10 -right-0 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium">
                 Cryptographically Secured
               </div>
             </div>

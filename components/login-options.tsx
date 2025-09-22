@@ -8,7 +8,7 @@ export function LoginOptions() {
   const router = useRouter()
 
   return (
-    <section className="py-20 sm:py-32">
+    <section id ='kolamcrypto' className="py-20 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-16">

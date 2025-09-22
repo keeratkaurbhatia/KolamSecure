@@ -6,25 +6,25 @@ export function FeaturesSection() {
       title: "Kambi Kolam Engine",
       description:
         "Advanced pattern generator converts certificate data into mathematically unique Kolam patterns using peer-reviewed geometry and cryptographic principles.",
-      icon: "🔐",
+      icon: "❉",
     },
     {
       title: "SHA-256 Integration",
       description:
         "Advanced steganography ties each certificate to cryptographic hashes, making documents tamper-proof and self-verifying artifacts.",
-      icon: "🛡️",
+      icon: "❉",
     },
     {
       title: "Offline Verification",
       description:
         "Python-powered system with Flask, ReportLab, PIL, and matplotlib enables secure authentication without internet connectivity.",
-      icon: "📱",
+      icon: "❉",
     },
     {
       title: "Cultural Security",
       description:
         "Blends 3000-year-old Indian art tradition with cutting-edge cryptography, creating a uniquely Indian approach to digital trust.",
-      icon: "🕉️",
+      icon: "❉",
     },
   ]
 

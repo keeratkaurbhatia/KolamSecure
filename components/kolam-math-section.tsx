@@ -1,5 +1,18 @@
+"use client"
+
+import React from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+function KolamCTA() {
+  const router = useRouter()
+  return (
+    <Button onClick={() => router.push('/kolam-tool')} size="lg" className="px-8">
+      See how we do it
+    </Button>
+  )
+}
 
 export function KolamMathSection() {
   return (
@@ -8,7 +21,7 @@ export function KolamMathSection() {
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              The Mathematics Behind Kolam
+              The Secret Behind Kolam
             </h2>
             <p className="mt-4 text-lg text-muted-foreground text-pretty">
               Discover how ancient Indian art meets modern cryptography
@@ -78,11 +91,9 @@ export function KolamMathSection() {
               </div>
               
               <div className="text-center">
-                <Button size="lg" className="px-8">
-                  Explore Kolam Mathematics
-                </Button>
+                <KolamCTA />
                 <p className="text-sm text-muted-foreground mt-2">
-                  Learn more about the fascinating intersection of art and cryptography
+                  Try our interactive demo to convert text into kolam geometry and explore the analyser with multiple examples
                 </p>
               </div>
             </div>

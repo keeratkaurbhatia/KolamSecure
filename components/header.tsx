@@ -8,7 +8,7 @@ export function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <h1 className="text-2xl font-bold text-white">KolamSecure</h1>
-              <p className="text-xs text-blue-100">Government of India Initiative</p>
+              <p className="text-xs text-blue-100">Authenticity, Etched in Kolam.</p>
             </div>
           </div>
 
@@ -21,16 +21,16 @@ export function Header() {
                 Technology
               </a>
               <a
-                href="#testimonials"
+                href="#kolamcrypto"
                 className="text-blue-100 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
               >
-                Case Studies
+                Access Portal
               </a>
               <a
-                href="#pricing"
+                href="#plans"
                 className="text-blue-100 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
               >
-                Pricing
+                Plans
               </a>
               <a
                 href="#contact"

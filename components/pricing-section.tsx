@@ -4,58 +4,60 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export function PricingSection() {
   const plans = [
     {
-      name: "Startup",
-      price: "₹50,000",
-      period: "per month",
-      description: "Perfect for small organizations and pilot programs",
+      name: "For Educational Institutions",
+      price: "",
+      period: "",
+      description: "Securing Academic Credentials",
       features: [
-        "Up to 1,000 certificates/month",
-        "Basic Kolam pattern generation",
-        "SHA-256 cryptographic security",
-        "Offline verification support",
-        "Email support",
+        "Degrees, Diplomas, and Mark Sheets",
+        "Tamper-Proof Digital Credentials",
+        "SHA-256 Cryptographic Integrity",
+        "Instant Online & Offline Verification",
+        "Guided Onboarding Support",
       ],
       popular: false,
+      buttonText: "Request a Demo",
     },
     {
-      name: "Enterprise",
-      price: "₹2,50,000",
-      period: "per month",
-      description: "Ideal for large organizations and state departments",
+      name: "For State & Public Sector",
+      price: "",
+      period: "",
+      description: "Departmental & State-Level Deployments",
       features: [
-        "Up to 50,000 certificates/month",
-        "Advanced pattern customization",
-        "Multi-language support",
-        "API integration",
-        "Dedicated account manager",
-        "24/7 priority support",
+        
+        "Licenses, Permits, and Official Records",
+        "Custom Kolam Patterns for Departmental Identity",
+        "Support for All Regional Languages",
+        "Seamless Integration with Existing Digital Infrastructure",
+    
       ],
       popular: true,
+      buttonText: "Explore Solutions",
     },
     {
-      name: "Government",
-      price: "Custom",
-      period: "pricing",
-      description: "For national and state-level implementations",
+      name: "For National Initiatives",
+      price: "",
+      period: "",
+      description: "Strategic e-Governance Projects",
       features: [
-        "Unlimited certificate generation",
-        "Custom Kolam pattern library",
-        "Blockchain integration ready",
-        "Zero-knowledge proof support",
-        "On-premise deployment",
-        "Training and consultation",
-        "SLA guarantees",
+        
+        "Nation-Scale Document Issuance",
+        
+        "Secure On-Premise or Government Cloud Deployment",
+        "Strategic Consultation and Comprehensive Training",
+        "Guaranteed Performance with Service Level Agreements (SLAs)",
       ],
       popular: false,
+      buttonText: "Initiate Consultation",
     },
   ]
 
   return (
-    <section id="pricing" className="py-20 sm:py-32">
+    <section id="plans" className="py-20 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Secure Your Documents at Scale
+            Empowering Governance with Verifiable Digital Trust
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
             Choose the right plan to protect your organization from document fraud. All plans include our revolutionary
