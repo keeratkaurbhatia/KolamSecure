@@ -4,31 +4,22 @@ import { FeaturesSection } from "@/components/features-section"
 import { LoginOptions } from "@/components/login-options"
 import { KolamMathSection } from "@/components/kolam-math-section"
 import { PricingSection } from "@/components/pricing-section"
-import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background mandala-bg">
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <div className="hero-mandala">
-          <HeroSection />
-        </div>
+        <HeroSection />
         <div className="section-divider"></div>
-        <div className="kolam-pattern">
-          <FeaturesSection />
-        </div>
+        <FeaturesSection />
         <div className="section-divider"></div>
         <LoginOptions />
         <div className="section-divider"></div>
         <KolamMathSection />
         <div className="section-divider"></div>
-        <div className="kolam-pattern">
-          <PricingSection />
-        </div>
-        <div className="section-divider"></div>
-        <CTASection />
+        <PricingSection />
       </main>
       <Footer />
     </div>

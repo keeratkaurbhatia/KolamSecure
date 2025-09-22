@@ -5,14 +5,42 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-export default function InstituteLogin() {
+export default function OrganisationLogin() {
+  const [selectedInstitute, setSelectedInstitute] = useState("")
+  const [password, setPassword] = useState("")
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [file, setFile] = useState<File | null>(null)
   const [isProcessing, setIsProcessing] = useState(false)
   const [certificateData, setCertificateData] = useState<any>(null)
   const [kolamGenerated, setKolamGenerated] = useState(false)
+
+  const institutes = [
+    "Indian Institute of Technology Delhi",
+    "Indian Institute of Technology Mumbai",
+    "Indian Institute of Science Bangalore",
+    "Jawaharlal Nehru University",
+    "University of Delhi",
+    "Anna University",
+    "Banaras Hindu University",
+    "Aligarh Muslim University"
+  ]
+
+  const handleLogin = () => {
+    if (selectedInstitute && password) {
+      // Simple authentication check
+      if (password === "admin123") {
+        setIsAuthenticated(true)
+      } else {
+        alert("Invalid password. Please try 'admin123' for demo purposes.")
+      }
+    } else {
+      alert("Please select an institute and enter password")
+    }
+  }
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const uploadedFile = event.target.files?.[0]
@@ -32,7 +60,7 @@ export default function InstituteLogin() {
       const mockData = {
         name: "Rajesh Kumar Sharma",
         course: "Bachelor of Computer Science",
-        institution: "Indian Institute of Technology Delhi",
+        institution: selectedInstitute,
         graduationDate: "May 15, 2024",
         grade: "First Class with Distinction",
         registrationNumber: "IIT-CSE-2024-001234",
@@ -54,24 +82,98 @@ export default function InstituteLogin() {
     }, 3000)
   }
 
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-white">
+        <Header />
+        <main className="py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-md">
+              <div className="text-center mb-12">
+                <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                  Organisation Login
+                </h1>
+                <p className="mt-4 text-lg text-muted-foreground">
+                  Select your organisation and enter credentials
+                </p>
+              </div>
+
+              <Card className="government-card">
+                <CardHeader>
+                  <CardTitle>Authentication Required</CardTitle>
+                  <CardDescription>
+                    Please select your organisation and provide authentication
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="institute-select">Select Organisation</Label>
+                    <Select value={selectedInstitute} onValueChange={setSelectedInstitute}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Choose your organisation" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {institutes.map((institute) => (
+                          <SelectItem key={institute} value={institute}>
+                            {institute}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="password">Password</Label>
+                    <Input
+                      id="password"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Enter your password"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Demo password: admin123
+                    </p>
+                  </div>
+
+                  <Button
+                    onClick={handleLogin}
+                    className="w-full government-button"
+                    size="lg"
+                  >
+                    Login to Organisation Portal
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Header />
       <main className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Institute Certificate Portal
+                Organisation Certificate Portal
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
+                Welcome, {selectedInstitute}
+              </p>
+              <p className="text-sm text-muted-foreground">
                 Upload certificates to generate secure Kolam cryptographic patterns
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Upload Section */}
-              <Card className="border-border bg-card">
+              <Card className="government-card">
                 <CardHeader>
                   <CardTitle>Upload Certificate</CardTitle>
                   <CardDescription>
@@ -92,7 +194,7 @@ export default function InstituteLogin() {
                   <Button
                     onClick={processCertificate}
                     disabled={!file || isProcessing}
-                    className="w-full"
+                    className="w-full government-button"
                     size="lg"
                   >
                     {isProcessing ? "Processing..." : "Extract Certificate Data"}
@@ -114,7 +216,7 @@ export default function InstituteLogin() {
                       <Button
                         onClick={generateKolam}
                         disabled={isProcessing}
-                        className="w-full mt-4"
+                        className="w-full mt-4 government-button"
                       >
                         {isProcessing ? "Generating Kolam..." : "Generate Kolam Pattern"}
                       </Button>
@@ -124,7 +226,7 @@ export default function InstituteLogin() {
               </Card>
 
               {/* Generated Certificate */}
-              <Card className="border-border bg-card">
+              <Card className="government-card">
                 <CardHeader>
                   <CardTitle>Secure Certificate</CardTitle>
                   <CardDescription>
@@ -135,17 +237,20 @@ export default function InstituteLogin() {
                   {kolamGenerated && certificateData ? (
                     <div className="space-y-4">
                       <div className="border-2 border-primary/20 rounded-lg p-6 bg-white text-black relative">
-                        {/* Kolam Pattern in Corner */}
-                        <div className="absolute top-4 right-4 w-16 h-16">
+                        {/* Kolam Pattern in Top Right Corner */}
+                        <div className="absolute top-4 right-4 w-12 h-12 opacity-60">
                           <img
                             src="/traditional-indian-kolam-mandala-pattern-with-geom.jpg"
                             alt="Kolam security pattern"
-                            className="w-full h-full object-contain opacity-80"
+                            className="w-full h-full object-contain rounded"
                           />
                         </div>
                         
-                        <div className="text-center mb-6">
-                          <h2 className="text-xl font-bold text-primary">Certificate of Graduation</h2>
+                        <div className="text-center mb-6 pr-16">
+                          <div className="flex items-center justify-center mb-2">
+                            <div className="w-8 h-8 bg-blue-600 rounded mr-2"></div>
+                            <h2 className="text-xl font-bold text-primary">Certificate of Graduation</h2>
+                          </div>
                           <p className="text-sm text-gray-600 mt-1">{certificateData.institution}</p>
                         </div>
                         
@@ -161,6 +266,9 @@ export default function InstituteLogin() {
                             <div className="flex justify-between text-xs text-gray-500">
                               <span>Reg. No: {certificateData.registrationNumber}</span>
                               <span>Cert. ID: {certificateData.certificateId}</span>
+                            </div>
+                            <div className="mt-2 text-xs text-blue-600">
+                              <span>🔒 Secured with KolamSecure Technology</span>
                             </div>
                           </div>
                         </div>

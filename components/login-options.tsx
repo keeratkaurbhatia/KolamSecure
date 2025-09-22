@@ -21,15 +21,15 @@ export function LoginOptions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Institute Login */}
-            <Card className="border-border bg-card hover:shadow-lg transition-shadow">
+            {/* Organisation Login */}
+            <Card className="government-card hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <CardTitle className="text-xl text-card-foreground">Institute Portal</CardTitle>
+                <CardTitle className="text-xl text-card-foreground">Organisation Portal</CardTitle>
                 <CardDescription>
                   Upload and generate secure certificates with Kolam cryptographic patterns
                 </CardDescription>
@@ -52,15 +52,15 @@ export function LoginOptions() {
                 <Button 
                   className="w-full" 
                   size="lg"
-                  onClick={() => router.push('/institute-login')}
+                  onClick={() => router.push('/organisation-login')}
                 >
-                  Institute Login
+                  Organisation Login
                 </Button>
               </CardContent>
             </Card>
 
             {/* Individual Login */}
-            <Card className="border-border bg-card hover:shadow-lg transition-shadow">
+            <Card className="government-card hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-secondary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
