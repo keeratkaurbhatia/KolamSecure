@@ -1,8 +1,8 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { FeaturesSection } from "@/components/features-section"
-import { VerificationDemo } from "@/components/verification-demo"
-import { TestimonialsSection } from "@/components/testimonials-section"
+import { LoginOptions } from "@/components/login-options"
+import { KolamMathSection } from "@/components/kolam-math-section"
 import { PricingSection } from "@/components/pricing-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
@@ -20,9 +20,9 @@ export default function Home() {
           <FeaturesSection />
         </div>
         <div className="section-divider"></div>
-        <VerificationDemo />
+        <LoginOptions />
         <div className="section-divider"></div>
-        <TestimonialsSection />
+        <KolamMathSection />
         <div className="section-divider"></div>
         <div className="kolam-pattern">
           <PricingSection />
