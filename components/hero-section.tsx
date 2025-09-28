@@ -19,7 +19,7 @@ export function HeroSection() {
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
                 <Link href="/secret-behind-kolam">
                   <Button size="lg" className="px-8 py-3 text-base">
-                    Discover Kolam Secrets
+                    Open Kolam Generator and Analyzer
                   </Button>
                 </Link>
                 <Button variant="outline" size="lg" className="px-8 py-3 text-base bg-transparent">

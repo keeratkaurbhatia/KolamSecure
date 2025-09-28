@@ -15,7 +15,7 @@ export function Header() {
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a
-                href="#features"
+                href="#kolam-tool"
                 className="text-blue-100 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
               >
                 Technology

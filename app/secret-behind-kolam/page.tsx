@@ -71,7 +71,7 @@ export default function SecretBehindKolamPage() {
                     {/* AR Kolam Demo Image */}
                     <div className="relative w-full h-full">
                       <img
-                        src="/ar-kolam-demo.jpg"
+                        src="/ar-kolam-demo.jpeg"
                         alt="3D AR Kolam Pattern Visualization"
                         className="w-full h-full object-contain rounded-lg"
                       />
@@ -92,7 +92,7 @@ export default function SecretBehindKolamPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium">
+                  <div className="absolute -bottom-6 -left-1 -right-1 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium justify-center flex items-center space-x-2 shadow-lg">
                     AR Enabled
                   </div>
                 </div>
@@ -256,7 +256,7 @@ export default function SecretBehindKolamPage() {
                       </div>
                       <div className="flex items-center space-x-3">
                         <div className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold">6</div>
-                        <span>Embed in certificate</span>
+                        <span>Additional Steganographic layer, then embed in certificate</span>
                       </div>
                     </div>
                   </div>
@@ -275,57 +275,7 @@ export default function SecretBehindKolamPage() {
               </div>
             </section>
 
-            {/* Interactive Tools */}
-            <section className="mb-20">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Interactive Kolam Tools</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Explore and create your own Kolam patterns with our interactive tools
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card className="border-border bg-card hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <CardTitle>Kolam Generator</CardTitle>
-                    <CardDescription>
-                      Create custom Kolam patterns from text or data
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-sm text-muted-foreground">
-                      Transform any text or data into beautiful Kolam patterns using our 
-                      advanced generation algorithm.
-                    </p>
-                    <Link href="/kolam-tool">
-                      <Button className="w-full">
-                        Try Kolam Generator
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-border bg-card hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <CardTitle>Pattern Analyzer</CardTitle>
-                    <CardDescription>
-                      Analyze existing Kolam patterns and their properties
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-sm text-muted-foreground">
-                      Upload or analyze Kolam patterns to understand their mathematical 
-                      properties and cultural significance.
-                    </p>
-                    <Link href="/kolam-tool">
-                      <Button variant="outline" className="w-full">
-                        Analyze Patterns
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              </div>
-            </section>
+            
 
             {/* Research & Development */}
             <section className="mb-20">
@@ -368,7 +318,7 @@ export default function SecretBehindKolamPage() {
                   </Link>
                   <Link href="/organisation-login">
                     <Button variant="outline" size="lg" className="px-8">
-                      Request Demo
+                      Get it to your Organisation
                     </Button>
                   </Link>
                 </div>
