@@ -91,9 +91,14 @@ export function KolamMathSection() {
               </div>
               
               <div className="text-center">
-                <KolamCTA />
+                <div className="space-y-4">
+                  <KolamCTA />
+                  <div className="text-xs text-muted-foreground">
+                    Interactive Kolam Generator & Analyzer
+                  </div>
+                </div>
                 <p className="text-sm text-muted-foreground mt-2">
-                  Try our interactive demo to convert text into kolam geometry and explore the analyser with multiple examples
+                  Convert text into kolam geometry and explore mathematical patterns with our comprehensive tools
                 </p>
               </div>
             </div>

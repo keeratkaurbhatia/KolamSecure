@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -16,9 +17,11 @@ export function HeroSection() {
                 }
               </p>
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
-                <Button size="lg" className="px-8 py-3 text-base">
-                  Request Demo
-                </Button>
+                <Link href="/secret-behind-kolam">
+                  <Button size="lg" className="px-8 py-3 text-base">
+                    Discover Kolam Secrets
+                  </Button>
+                </Link>
                 <Button variant="outline" size="lg" className="px-8 py-3 text-base bg-transparent">
                   Learn More
                 </Button>
