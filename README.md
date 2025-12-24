@@ -28,7 +28,7 @@ KolamSecure is a secure certificate verification platform that blends modern cry
 
 ## Why KolamSecure?  
 
-KolamSecure is not just a verification system — it **promotes cultural heritage** while ensuring modern security standards. By merging tradition and technology, it provides a **unique, trustworthy, and visually meaningful certificate validation solution**.  
+KolamSecure is not just a simple verification system — it **promotes cultural heritage** while ensuring modern security standards. By merging tradition and technology, it provides a **unique, trustworthy, and visually meaningful certificate validation solution**.  
 
 ---
 
@@ -37,4 +37,5 @@ KolamSecure is not just a verification system — it **promotes cultural heritag
 - More advanced Kolam pattern designs for certificates.  
 - Mobile-friendly validation with QR code scanning.  
 - Integration with educational and professional institutes at scale.  
+
 
